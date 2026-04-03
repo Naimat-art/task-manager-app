@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="Outer">
+        <div class="Left">
+            <div id="line-1">
+                <div class="taskLogo" style="background-image: url(task-logo.png);"></div>
+                <i id="icon-1" class="fa-solid fa-angle-down"></i>
+                <i id="icon-2" class="fa-solid fa-bars"></i>
+            </div>
+            <div id="line-2">
+                <div class="task watch"><i class="fa-solid fa-stopwatch"></i></div>
+                <div class="task search"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="task add"><i class="fa-solid fa-plus"></i> Add task</div>
+            </div>
+            <p id="hint">My tasks</p>
+            <div id="allTask">
+                <i id="icon-1" class="fa-solid fa-angle-down"></i>
+                All tasks
+                <p id="p2">0</p>
+            </div>
+            
+            <div id="group-list"></div>
+            <div class="today">
+                <p id="dated">Today</p>
+                <p id="dated-count">0</p>
+            </div>
+        </div>
+        <div class="Main">
+            <div class="Main01">
+                <input id="search-task" type="text" placeholder="Search tasks..." />
+                <div id="Main1-task">All Tasks</div>
+                <div id="Main1-key">
+                    <div class="Main1-export"><i class="fa-solid fa-download"></i> Export</div>
+                    <div class="Main1-list"><i class="fa-solid fa-list"></i> List</div>
+                    <div class="Main1-filter"><i class="fa-solid fa-filter"></i> Filter</div>
+                    <div id="filter-options" class="hidden">
+                        <div data-filter="all">All Tasks</div>
+                        <div data-filter="active">Active</div>
+                        <div data-filter="completed">Completed</div>
+                    </div>
+                </div>
+                <div id="sign-in"><i class="fa-solid fa-user-tag"></i> Sign in</div>
+            </div>
+
+            <div id="clear-completed" class="clear-btn">
+                Clear Completed
+            </div>
+            <div class="Plus">
+                <button class="groupMain"><i class="fa-solid fa-plus"></i> Add group</button>
+            </div>
+            <input type="date" id="due-date">
+            <div class="task-input-area">
+                <input id="task-input" type="text" placeholder="Add a new task..." />
+
+                <button id="add-task-btn">Add</button>
+            </div>
+            <div id="task-container"></div>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
